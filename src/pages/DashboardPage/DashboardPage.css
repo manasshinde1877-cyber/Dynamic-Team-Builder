@@ -1,0 +1,28 @@
+.page-headline { font-size: 2.5rem; }
+.stat-cards-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.dashboard-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .dashboard-main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-headline { font-size: 1.75rem; }
+}
+
+@media (max-width: 480px) {
+  .page-headline { font-size: 1.5rem; }
+}

@@ -1,0 +1,121 @@
+nav.nav-inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2.5rem;
+  background: rgba(13, 13, 21, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(72, 71, 80, 0.2);
+  gap: 1rem;
+}
+
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary), var(--primary-container));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  flex-shrink: 0;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 0.25rem;
+  background: var(--surface-container);
+  padding: 0.25rem;
+  border-radius: 1rem;
+}
+
+.nav-tab {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.75rem;
+  border: none;
+  background: transparent;
+  color: var(--on-surface-variant);
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+.nav-tab.active { background: var(--surface-container-highest); color: var(--on-surface); }
+.nav-tab:hover:not(.active) { color: var(--on-surface); }
+
+.nav-tab__badge {
+  background: var(--primary);
+  color: var(--on-primary);
+  border-radius: 999px;
+  padding: 0.1rem 0.45rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.nav-participant-count {
+  font-size: 0.75rem;
+  color: var(--on-surface-variant);
+  white-space: nowrap;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  border: none;
+  background: var(--surface-container);
+  color: var(--on-surface-variant);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.nav-btn--active {
+  background: rgba(216, 145, 255, 0.12);
+  border: 1px solid rgba(216, 145, 255, 0.3);
+  color: var(--primary);
+}
+.nav-btn:hover { color: var(--on-surface); }
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  nav.nav-inner {
+    padding: 0.875rem 1rem;
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+  }
+  .nav-tabs {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    overflow-x: auto;
+  }
+  .nav-participant-count { display: none; }
+}
+
+@media (max-width: 480px) {
+  .nav-tab { padding: 0.4rem 0.65rem; font-size: 0.7rem; }
+  .nav-btn__label { display: none; }
+  .nav-btn { padding: 0.5rem; }
+}

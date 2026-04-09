@@ -1,0 +1,107 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-card {
+  background: var(--surface-container);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  max-width: 480px;
+  width: 100%;
+  border: 1px solid rgba(72, 71, 80, 0.3);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+  animation: fadeInUp 0.3s ease both;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--on-surface-variant);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+.modal-close:hover { color: var(--on-surface); }
+
+.modal-info-box {
+  padding: 0.875rem;
+  background: var(--surface-container-low);
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.modal-field {
+  margin-bottom: 1.25rem;
+}
+
+.modal-field__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.modal-field__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--on-surface-variant);
+}
+
+.modal-field__link {
+  font-size: 0.72rem;
+  color: var(--primary);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.modal-field__link:hover { opacity: 0.8; }
+
+.modal-field__input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border-radius: 0.875rem;
+  font-size: 0.875rem;
+  font-family: monospace;
+}
+
+.modal-field__hint {
+  font-size: 0.72rem;
+  color: var(--on-surface-variant);
+  margin-top: 0.4rem;
+}
+.modal-field__hint--error  { color: var(--error); }
+.modal-field__hint--success { color: #4ade80; }
+
+.modal-no-key-box {
+  padding: 0.875rem;
+  background: rgba(169, 151, 255, 0.08);
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(169, 151, 255, 0.15);
+}
+
+@media (max-width: 480px) {
+  .modal-card { padding: 1.5rem; border-radius: 1.25rem; }
+}

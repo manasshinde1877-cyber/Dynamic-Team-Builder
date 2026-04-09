@@ -1,0 +1,293 @@
+.landing-container {
+  background: var(--surface);
+  color: var(--on-surface);
+  overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+/* ─── Hero Section ────────────────────────────────────────────────────────── */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.landing-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--surface-container-high);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--tertiary);
+  border: 1px solid rgba(169, 151, 255, 0.2);
+  margin-bottom: 2rem;
+}
+
+.hero-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.05em;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--on-surface-variant);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.launch-btn {
+  padding: 1.25rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border: none;
+  border-radius: 1.5rem;
+  color: var(--on-primary);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.launch-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(216, 145, 255, 0.4);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--on-surface-variant);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+/* ─── Showcase Sections ───────────────────────────────────────────────────── */
+.showcase-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.showcase-content-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.section-step {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.showcase-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.showcase-desc {
+  font-size: 1.1rem;
+  color: var(--on-surface-variant);
+  line-height: 1.7;
+}
+
+.img-frame {
+  position: relative;
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.showcase-img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  display: block;
+}
+
+.img-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(216, 145, 255, 0.1), transparent 70%);
+  pointer-events: none;
+}
+
+/* ─── Final CTA ───────────────────────────────────────────────────────────── */
+.final-cta {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.cta-card {
+  max-width: 900px;
+  width: 100%;
+  padding: 5rem 3rem;
+  border-radius: 3rem;
+  text-align: center;
+  border: 1px solid rgba(216, 145, 255, 0.15);
+  background: linear-gradient(135deg, rgba(25, 25, 34, 0.8), rgba(13, 13, 21, 0.9));
+}
+
+.cta-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.cta-text {
+  font-size: 1.25rem;
+  color: var(--on-surface-variant);
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-launch-btn {
+  padding: 1.25rem 3rem;
+  font-size: 1.1rem;
+  border-radius: 1.5rem;
+}
+
+/* ─── Interactive Mesh ───────────────────────────────────────────────────── */
+.interactive-mesh-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.mesh-lines-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mesh-line {
+  stroke: var(--primary);
+  stroke-width: 0.5;
+  stroke-opacity: 0.15;
+}
+
+.vector-sphere {
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(216, 145, 255, 0.4), rgba(255, 104, 168, 0.1));
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(216, 145, 255, 0.15);
+}
+
+/* ─── Background Blobs ───────────────────────────────────────────────────── */
+.ambient-blobs {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.15;
+}
+
+.blob-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, var(--primary), transparent);
+  top: -100px;
+  right: -100px;
+}
+
+.blob-2 {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, var(--secondary), transparent);
+  bottom: -150px;
+  left: -200px;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .showcase-content-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  .showcase-text-col {
+    order: 2;
+  }
+  .showcase-img-col {
+    order: 1;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .showcase-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 3.5rem; }
+  .cta-title { font-size: 2.5rem; }
+  .showcase-section { padding: 4rem 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .hero-title { font-size: 2.75rem; }
+  .hero-subtitle { font-size: 1rem; }
+  .showcase-title { font-size: 2rem; }
+  .cta-card { padding: 3rem 1.5rem; }
+}

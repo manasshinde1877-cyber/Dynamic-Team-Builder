@@ -1,0 +1,53 @@
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.profile-sticky {
+  position: sticky;
+  top: 7rem;
+}
+
+.profile-form-card {
+  padding: 2.5rem;
+}
+
+.hero-headline {
+  font-size: 3.5rem;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .profile-sticky {
+    position: static;
+  }
+  .hero-headline {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-form-card {
+    padding: 1.5rem;
+  }
+  .hero-headline {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-headline {
+    font-size: 1.75rem;
+  }
+  .profile-form-card {
+    padding: 1.25rem;
+    border-radius: 1.5rem !important;
+  }
+}

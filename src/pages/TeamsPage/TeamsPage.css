@@ -1,0 +1,25 @@
+.teams-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 1rem;
+  text-align: center;
+}
+
+.teams-scroll {
+  padding-bottom: 1.5rem;
+}
+
+/* On mobile, stack team cards vertically */
+@media (max-width: 768px) {
+  .teams-scroll {
+    flex-direction: column;
+    overflow-x: visible;
+  }
+  .team-card {
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+}
