@@ -8,25 +8,25 @@ const SHOWCASE_ITEMS = [
     id: 'profile',
     title: 'Intelligence Mapping',
     description: 'Map your core expertise and mastery levels to build your unique AI-ready profile.',
-    img: '/screens/skill_entry.png',
+    img: '/showcase/skill_entry.png',
   },
   {
     id: 'dashboard',
     title: 'Dynamic Workspace',
     description: 'Get real-time insights into your team composition and skill distribution at a glance.',
-    img: '/screens/dashboard.png',
+    img: '/showcase/dashboard.png',
   },
   {
     id: 'teams',
     title: 'AI Synthesis',
     description: 'Automated team formation using advanced neural matching to ensure peak performance and stability.',
-    img: '/screens/workspace.png',
+    img: '/showcase/workspace.png',
   },
   {
     id: 'analytics',
     title: 'Deep Behavioral Analytics',
     description: 'Deep-dive into team dimensions, compatibility scores, and performance metrics.',
-    img: '/screens/analytics.png',
+    img: '/showcase/analytics.png',
   },
 ];
 
